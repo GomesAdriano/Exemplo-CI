@@ -1,0 +1,19 @@
+name: Entrega Contínua
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checar código PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      - name: Clonar repositório
+        uses: actions/checkout@v2
+      - name: Instalar dependências
+        run: composer install
+      - name: Testar código
+        run: phpunit --bootstrap vendor/autoload.php tests
