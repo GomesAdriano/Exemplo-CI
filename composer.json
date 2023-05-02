@@ -1,0 +1,15 @@
+{
+    "name": "nicole/exemplo-ci",
+    "description": "Exemplo de integração contínua com o GitHub Actions",
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nicole\\ExemploCi\\": "src/"
+        }
+    }
+}

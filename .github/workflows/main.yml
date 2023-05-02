@@ -16,4 +16,4 @@ jobs:
       - name: Instalar dependências
         run: composer install
       - name: Testar código
-        run: phpunit --bootstrap vendor/autoload.php tests
+        run: vendor/bin/phpunit tests
